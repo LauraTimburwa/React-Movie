@@ -1,4 +1,5 @@
 import MovieCard from "../components/MovieCard";
+import {useState} from "react"
 
 function Home() {
   const movies = [
@@ -7,9 +8,13 @@ function Home() {
     { id: 3, title: "Avengers: Endgame", release_date: "2018" }
   ];
 
+  const handleSearch = () => {};
+
   return (
     <div className="home">
-      <form onSubmit={} className="search-form"></form>
+      <form onSubmit={} className="search-form">
+        <input type="text" placeholder="Search for movies..." className="search-input"/>
+      </form>
 
       <div className="movies-grid">
         {movies.map((movie) => (
