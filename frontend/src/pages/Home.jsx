@@ -11,15 +11,21 @@ function Home() {
   ];
 
   const handleSearch = () => {};
+     alert
 
   return (
     <div className="home">
       <form onSubmit={} className="search-form">
-        <input type="text" placeholder="Search for movies..." className="search-input"/>
+        <input type="text" placeholder="Search for movies..." 
+        className="search-input"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        />
       </form>
 
       <div className="movies-grid">
         {movies.map((movie) => (
+          movie.title.toLowerCase().startsWith(searchQuery) && 
           <MovieCard movie={movie} key={movie.id} />
         ))}
       </div>
