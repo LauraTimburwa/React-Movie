@@ -1,11 +1,15 @@
-import './App.css'
-import MovieCard from "./components/MovieCard"
+import './App.css';
+import Home from "./pages/Home"
+import {Routes, Route} from "react-router-dom"
 
 function App() {
   return(
-    <div>
-      <MovieCard movie={{title: "The Avengers", release_date: "2026"}}/>
-    </div>
+    <main className="main-content">
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/favourites" element={<Home />}></Route>
+      </Routes>
+    </main>
   )
 }
 
