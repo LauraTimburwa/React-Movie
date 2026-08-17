@@ -11,11 +11,10 @@ function Home() {
   ];
 
   const handleSearch = () => {};
-     alert
 
   return (
     <div className="home">
-      <form onSubmit={} className="search-form">
+      <form onSubmit={handleSearch} className="search-form">
         <input type="text" placeholder="Search for movies..." 
         className="search-input"
         value={searchQuery}
